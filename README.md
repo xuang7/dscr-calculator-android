@@ -7,7 +7,7 @@ This project was completed for the AI Bridge Android take-home assignment and fo
 ## Demo and Artifacts
 - Repository: [https://github.com/xuang7/dscr-calculator-android](https://github.com/xuang7/dscr-calculator-android)
 - Debug APK: `app/build/outputs/apk/debug/app-debug.apk`
-- Live Demo (Appetize): [https://appetize.io/app/b_d52ybmtkq7ennzvzhdu6ttkjha](https://appetize.io/app/b_d52ybmtkq7ennzvzhdu6ttkjha)
+- Live Demo (Appetize): [https://appetize.io/app/b_6fskc4mvrnelhqdhc5u2iblaie](https://appetize.io/app/b_6fskc4mvrnelhqdhc5u2iblaie)
 - Walkthrough Video: [https://youtu.be/7CMnZoB28ak](https://youtu.be/7CMnZoB28ak)
 
 ## Requirement Coverage
