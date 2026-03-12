@@ -117,8 +117,17 @@ app/src/main/java/com/example/dscrcalculator
 All unit tests pass. Lint passes (warnings only for newer dependency versions).
 
 ## Screenshots
+### Calculator
+![Calculator](screenshots/calculator.png)
 
-> TODO: Add screenshots to `screenshots/` folder
+### App Overview
+![Open app](screenshots/open-app.png)
+
+### History List
+![History list](screenshots/history-list.png)
+
+### History Detail
+![History detail](screenshots/history-detail.png)
 
 ## AI Tools Used
 - **Codex (OpenAI)**: Architecture design, feature implementation, and code generation.
