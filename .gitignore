@@ -1,15 +1,22 @@
 *.iml
-.gradle
-/local.properties
-/.idea/caches
-/.idea/libraries
-/.idea/modules.xml
-/.idea/workspace.xml
-/.idea/navEditor.xml
-/.idea/assetWizardSettings.xml
 .DS_Store
-/build
-/captures
-.externalNativeBuild
-.cxx
+
+# IDE files
+.idea/
+
+# Local SDK and machine-specific configs
 local.properties
+
+# Gradle/Kotlin build outputs
+.gradle/
+.kotlin/
+build/
+app/build/
+captures/
+
+# Native build artifacts
+.externalNativeBuild/
+.cxx/
+
+# Heap dumps / crash artifacts
+*.hprof

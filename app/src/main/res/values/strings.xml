@@ -1,3 +1,25 @@
 <resources>
-    <string name="app_name">DSCRCalculator</string>
+    <string name="app_name">DSCR Calculator</string>
+    <string name="calculator">Calculator</string>
+    <string name="history">History</string>
+    <string name="back">Back</string>
+    <string name="property_address">Property Address</string>
+    <string name="monthly_rental_income">Monthly Rental Income</string>
+    <string name="monthly_mortgage">Monthly Mortgage Payment (P&amp;I)</string>
+    <string name="monthly_tax">Monthly Property Tax</string>
+    <string name="monthly_insurance">Monthly Insurance</string>
+    <string name="monthly_hoa">Monthly HOA Fee (Optional)</string>
+    <string name="monthly_total_expenses">Monthly Total Expenses</string>
+    <string name="input_range_hint">Allowed range per amount field: $0 to $1,000,000.</string>
+    <string name="save">Save Calculation</string>
+    <string name="reset">Reset</string>
+    <string name="dscr_ratio">DSCR Ratio: %.2f</string>
+    <string name="strong">Strong (≥ 1.25)</string>
+    <string name="marginal">Marginal (1.0 – 1.24)</string>
+    <string name="does_not_qualify">Does Not Qualify (&lt; 1.0)</string>
+    <string name="history_empty">No history found</string>
+    <string name="history_swipe_hint">Swipe left on an item to delete.</string>
+    <string name="calculation_details">Calculation Details</string>
+    <string name="saved_on">Saved on %1$s</string>
+    <string name="calculation_not_found">Calculation not found.</string>
 </resources>
