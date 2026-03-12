@@ -2,8 +2,6 @@
 
 A native Android DSCR (Debt Service Coverage Ratio) loan calculator built with Kotlin and Jetpack Compose.
 
-This project was completed for the AI Bridge Android take-home assignment and focuses on clean architecture, clear UX, and production-minded implementation quality.
-
 ## Demo and Artifacts
 - Repository: [https://github.com/xuang7/dscr-calculator-android](https://github.com/xuang7/dscr-calculator-android)
 - Debug APK: `app/build/outputs/apk/debug/app-debug.apk`
