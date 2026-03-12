@@ -3,9 +3,13 @@
     <string name="calculator">Calculadora</string>
     <string name="history">Historial</string>
     <string name="change_language">Cambiar idioma</string>
+    <string name="change_theme">Cambiar tema</string>
     <string name="language_english">Inglés</string>
     <string name="language_chinese_simplified">Chino simplificado</string>
     <string name="language_spanish">Español</string>
+    <string name="theme_system">Sistema</string>
+    <string name="theme_light">Claro</string>
+    <string name="theme_dark">Oscuro</string>
     <string name="back">Atrás</string>
     <string name="property_address">Dirección de la propiedad</string>
     <string name="monthly_rental_income">Ingresos mensuales por alquiler</string>

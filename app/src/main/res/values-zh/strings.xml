@@ -3,9 +3,13 @@
     <string name="calculator">计算器</string>
     <string name="history">历史记录</string>
     <string name="change_language">切换语言</string>
+    <string name="change_theme">切换主题</string>
     <string name="language_english">English</string>
     <string name="language_chinese_simplified">简体中文</string>
     <string name="language_spanish">西班牙语</string>
+    <string name="theme_system">跟随系统</string>
+    <string name="theme_light">浅色</string>
+    <string name="theme_dark">深色</string>
     <string name="back">返回</string>
     <string name="property_address">房产地址</string>
     <string name="monthly_rental_income">月租金收入</string>

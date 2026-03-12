@@ -22,7 +22,7 @@ import androidx.hilt.navigation.compose.hiltViewModel
 import com.example.dscrcalculator.R
 import com.example.dscrcalculator.data.local.CalculationEntity
 import com.example.dscrcalculator.domain.util.DSCRCalculator
-import com.example.dscrcalculator.ui.common.LanguageMenu
+import com.example.dscrcalculator.ui.common.AppBarMenus
 import com.example.dscrcalculator.ui.common.statusColor
 import java.text.SimpleDateFormat
 import java.util.*
@@ -39,7 +39,7 @@ fun HistoryScreen(
         topBar = {
             TopAppBar(
                 title = { Text(stringResource(R.string.history)) },
-                actions = { LanguageMenu() }
+                actions = { AppBarMenus() }
             )
         }
     ) { padding ->

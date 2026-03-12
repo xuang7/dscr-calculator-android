@@ -17,7 +17,7 @@ import androidx.compose.ui.unit.sp
 import androidx.hilt.navigation.compose.hiltViewModel
 import com.example.dscrcalculator.R
 import com.example.dscrcalculator.domain.model.DSCRStatus
-import com.example.dscrcalculator.ui.common.LanguageMenu
+import com.example.dscrcalculator.ui.common.AppBarMenus
 import com.example.dscrcalculator.ui.common.statusColor
 import com.example.dscrcalculator.ui.common.statusTextRes
 
@@ -32,7 +32,7 @@ fun CalculatorScreen(
         topBar = {
             TopAppBar(
                 title = { Text(stringResource(R.string.calculator)) },
-                actions = { LanguageMenu() }
+                actions = { AppBarMenus() }
             )
         }
     ) { padding ->
