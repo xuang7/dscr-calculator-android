@@ -61,7 +61,7 @@ fun CalculatorScreen(
                 OutlinedTextField(
                     value = uiState.propertyAddress,
                     onValueChange = viewModel::onPropertyAddressChange,
-                    placeholder = { Text(stringResource(R.string.property_address)) },
+                    label = { Text(stringResource(R.string.property_address)) },
                     modifier = Modifier.fillMaxWidth(),
                     singleLine = true
                 )
@@ -243,7 +243,7 @@ fun CurrencyTextField(
     OutlinedTextField(
         value = value,
         onValueChange = onValueChange,
-        placeholder = { Text(label) },
+        label = { Text(label) },
         prefix = {
             if (value.isNotEmpty()) {
                 Text("$", fontWeight = FontWeight.Bold)
