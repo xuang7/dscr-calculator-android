@@ -7,25 +7,25 @@ import androidx.compose.foundation.lazy.items
 import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.filled.ChevronRight
 import androidx.compose.material.icons.filled.Delete
+import androidx.compose.material.icons.filled.History
 import androidx.compose.material3.*
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.collectAsState
 import androidx.compose.runtime.getValue
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
-import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.unit.dp
-import androidx.compose.ui.unit.sp
 import androidx.hilt.navigation.compose.hiltViewModel
 import com.example.dscrcalculator.R
 import com.example.dscrcalculator.data.local.CalculationEntity
 import com.example.dscrcalculator.domain.util.DSCRCalculator
 import com.example.dscrcalculator.ui.common.AppBarMenus
 import com.example.dscrcalculator.ui.common.statusColor
-import java.text.SimpleDateFormat
-import java.util.*
+import com.example.dscrcalculator.ui.common.statusTextRes
+import java.text.DateFormat
+import java.util.Locale
 
 @OptIn(ExperimentalMaterial3Api::class)
 @Composable
@@ -50,7 +50,19 @@ fun HistoryScreen(
                     .padding(padding),
                 contentAlignment = Alignment.Center
             ) {
-                Text(text = stringResource(R.string.history_empty))
+                Column(horizontalAlignment = Alignment.CenterHorizontally) {
+                    Icon(
+                        imageVector = Icons.Default.History,
+                        contentDescription = null,
+                        tint = MaterialTheme.colorScheme.onSurfaceVariant,
+                        modifier = Modifier.size(36.dp)
+                    )
+                    Spacer(modifier = Modifier.height(8.dp))
+                    Text(
+                        text = stringResource(R.string.history_empty),
+                        style = MaterialTheme.typography.titleMedium
+                    )
+                }
             }
         } else {
             Column(
@@ -93,8 +105,11 @@ fun HistoryItem(
     onDelete: () -> Unit
 ) {
     val status = DSCRCalculator.getStatus(calculation.dscrRatio)
-    val sdf = SimpleDateFormat("MMM dd, yyyy HH:mm", Locale.getDefault())
-    val dateString = sdf.format(Date(calculation.timestamp))
+    val dateString = DateFormat.getDateTimeInstance(
+        DateFormat.MEDIUM,
+        DateFormat.SHORT,
+        Locale.getDefault()
+    ).format(calculation.timestamp)
     val dismissState = rememberSwipeToDismissBoxState(
         confirmValueChange = { value ->
             if (value == SwipeToDismissBoxValue.EndToStart) {
@@ -141,7 +156,8 @@ fun HistoryItem(
             modifier = Modifier
                 .fillMaxWidth()
                 .clickable(onClick = onClick),
-            elevation = CardDefaults.cardElevation(defaultElevation = 2.dp)
+            elevation = CardDefaults.cardElevation(defaultElevation = 2.dp),
+            shape = MaterialTheme.shapes.medium
         ) {
             Row(
                 modifier = Modifier
@@ -152,20 +168,39 @@ fun HistoryItem(
                 Column(modifier = Modifier.weight(1f)) {
                     Text(
                         text = calculation.propertyAddress,
-                        fontWeight = FontWeight.Bold,
-                        fontSize = 18.sp
+                        style = MaterialTheme.typography.titleMedium,
+                        fontWeight = FontWeight.Bold
                     )
                     Text(
                         text = dateString,
                         style = MaterialTheme.typography.bodySmall,
-                        color = Color.Gray
+                        color = MaterialTheme.colorScheme.onSurfaceVariant
                     )
-                    Spacer(modifier = Modifier.height(4.dp))
-                    Text(
-                        text = stringResource(R.string.dscr_ratio, calculation.dscrRatio),
-                        color = status.statusColor(),
-                        fontWeight = FontWeight.Medium
-                    )
+                    Spacer(modifier = Modifier.height(6.dp))
+                    Row(
+                        modifier = Modifier.wrapContentWidth(),
+                        horizontalArrangement = Arrangement.spacedBy(8.dp),
+                        verticalAlignment = Alignment.CenterVertically
+                    ) {
+                        Text(
+                            text = stringResource(R.string.dscr_ratio, calculation.dscrRatio),
+                            color = MaterialTheme.colorScheme.onSurfaceVariant,
+                            style = MaterialTheme.typography.bodySmall,
+                            fontWeight = FontWeight.SemiBold
+                        )
+                        Surface(
+                            color = status.statusColor().copy(alpha = 0.14f),
+                            shape = MaterialTheme.shapes.small
+                        ) {
+                            Text(
+                                text = stringResource(status.statusTextRes()),
+                                color = status.statusColor(),
+                                style = MaterialTheme.typography.labelSmall,
+                                fontWeight = FontWeight.SemiBold,
+                                modifier = Modifier.padding(horizontal = 8.dp, vertical = 3.dp)
+                            )
+                        }
+                    }
                 }
                 Icon(
                     imageVector = Icons.Default.ChevronRight,

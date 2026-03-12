@@ -21,10 +21,11 @@
     <string name="input_range_hint">每个金额字段允许范围：$0 - $1,000,000。</string>
     <string name="save">保存记录</string>
     <string name="reset">重置</string>
-    <string name="dscr_ratio">DSCR 比率：%.2f</string>
-    <string name="strong">优秀（≥ 1.25）</string>
-    <string name="marginal">临界（1.0 – 1.24）</string>
-    <string name="does_not_qualify">不符合贷款条件（&lt; 1.0）</string>
+    <string name="dscr_ratio_label">债务偿付覆盖率（DSCR）</string>
+    <string name="dscr_ratio">DSCR：%.2f</string>
+    <string name="strong">优秀</string>
+    <string name="marginal">临界</string>
+    <string name="does_not_qualify">不合格</string>
     <string name="history_empty">暂无历史记录</string>
     <string name="history_swipe_hint">左滑条目可删除。</string>
     <string name="calculation_details">计算详情</string>

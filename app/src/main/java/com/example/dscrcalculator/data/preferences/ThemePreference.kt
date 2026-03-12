@@ -2,6 +2,7 @@ package com.example.dscrcalculator.data.preferences
 
 import android.content.Context
 import androidx.appcompat.app.AppCompatDelegate
+import androidx.core.content.edit
 
 object ThemePreference {
     private const val PREFS_NAME = "dscr_settings"
@@ -14,6 +15,6 @@ object ThemePreference {
 
     fun setNightMode(context: Context, nightMode: Int) {
         val prefs = context.applicationContext.getSharedPreferences(PREFS_NAME, Context.MODE_PRIVATE)
-        prefs.edit().putInt(KEY_NIGHT_MODE, nightMode).apply()
+        prefs.edit { putInt(KEY_NIGHT_MODE, nightMode) }
     }
 }

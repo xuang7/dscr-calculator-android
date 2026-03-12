@@ -21,10 +21,11 @@
     <string name="input_range_hint">Rango permitido por campo: $0 a $1,000,000.</string>
     <string name="save">Guardar cálculo</string>
     <string name="reset">Restablecer</string>
-    <string name="dscr_ratio">Ratio DSCR: %.2f</string>
-    <string name="strong">Fuerte (≥ 1.25)</string>
-    <string name="marginal">Marginal (1.0 – 1.24)</string>
-    <string name="does_not_qualify">No califica (&lt; 1.0)</string>
+    <string name="dscr_ratio_label">Ratio de cobertura del servicio de la deuda (DSCR)</string>
+    <string name="dscr_ratio">DSCR: %.2f</string>
+    <string name="strong">Fuerte</string>
+    <string name="marginal">Marginal</string>
+    <string name="does_not_qualify">No califica</string>
     <string name="history_empty">No hay historial</string>
     <string name="history_swipe_hint">Desliza a la izquierda para eliminar.</string>
     <string name="calculation_details">Detalles del cálculo</string>

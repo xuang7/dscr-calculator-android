@@ -21,10 +21,11 @@
     <string name="input_range_hint">Allowed range per amount field: $0 to $1,000,000.</string>
     <string name="save">Save Calculation</string>
     <string name="reset">Reset</string>
-    <string name="dscr_ratio">DSCR Ratio: %.2f</string>
-    <string name="strong">Strong (≥ 1.25)</string>
-    <string name="marginal">Marginal (1.0 – 1.24)</string>
-    <string name="does_not_qualify">Does Not Qualify (&lt; 1.0)</string>
+    <string name="dscr_ratio_label">Debt Service Coverage Ratio (DSCR)</string>
+    <string name="dscr_ratio">DSCR: %.2f</string>
+    <string name="strong">Strong</string>
+    <string name="marginal">Marginal</string>
+    <string name="does_not_qualify">Not Qualified</string>
     <string name="history_empty">No history found</string>
     <string name="history_swipe_hint">Swipe left on an item to delete.</string>
     <string name="calculation_details">Calculation Details</string>

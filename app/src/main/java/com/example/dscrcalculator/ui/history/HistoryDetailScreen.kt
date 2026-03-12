@@ -38,9 +38,9 @@ import com.example.dscrcalculator.domain.util.DSCRCalculator
 import com.example.dscrcalculator.ui.common.AppBarMenus
 import com.example.dscrcalculator.ui.common.statusColor
 import com.example.dscrcalculator.ui.common.statusTextRes
+import java.text.DateFormat
 import java.text.NumberFormat
-import java.text.SimpleDateFormat
-import java.util.Date
+import java.util.Currency
 import java.util.Locale
 
 @OptIn(ExperimentalMaterial3Api::class)
@@ -109,8 +109,14 @@ private fun HistoryDetailContent(
     calculation: CalculationEntity,
     modifier: Modifier = Modifier
 ) {
-    val currencyFormatter = NumberFormat.getCurrencyInstance(Locale.getDefault())
-    val dateFormat = SimpleDateFormat("MMM dd, yyyy HH:mm", Locale.getDefault())
+    val currencyFormatter = NumberFormat.getCurrencyInstance(Locale.US).apply {
+        currency = Currency.getInstance("USD")
+    }
+    val savedOn = DateFormat.getDateTimeInstance(
+        DateFormat.MEDIUM,
+        DateFormat.SHORT,
+        Locale.getDefault()
+    ).format(calculation.timestamp)
     val status = DSCRCalculator.getStatus(calculation.dscrRatio)
     val statusColor = status.statusColor()
     val totalExpenses = calculation.monthlyMortgagePayment +
@@ -145,7 +151,7 @@ private fun HistoryDetailContent(
                 Text(
                     text = stringResource(
                         R.string.saved_on,
-                        dateFormat.format(Date(calculation.timestamp))
+                        savedOn
                     ),
                     style = MaterialTheme.typography.bodySmall
                 )
