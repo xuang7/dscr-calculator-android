@@ -22,6 +22,7 @@ import androidx.hilt.navigation.compose.hiltViewModel
 import com.example.dscrcalculator.R
 import com.example.dscrcalculator.data.local.CalculationEntity
 import com.example.dscrcalculator.domain.util.DSCRCalculator
+import com.example.dscrcalculator.ui.common.LanguageMenu
 import com.example.dscrcalculator.ui.common.statusColor
 import java.text.SimpleDateFormat
 import java.util.*
@@ -36,7 +37,10 @@ fun HistoryScreen(
 
     Scaffold(
         topBar = {
-            TopAppBar(title = { Text(stringResource(R.string.history)) })
+            TopAppBar(
+                title = { Text(stringResource(R.string.history)) },
+                actions = { LanguageMenu() }
+            )
         }
     ) { padding ->
         if (uiState.calculations.isEmpty()) {

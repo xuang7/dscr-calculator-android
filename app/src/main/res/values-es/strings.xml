@@ -1,0 +1,29 @@
+<resources>
+    <string name="app_name">Calculadora DSCR</string>
+    <string name="calculator">Calculadora</string>
+    <string name="history">Historial</string>
+    <string name="change_language">Cambiar idioma</string>
+    <string name="language_english">Inglés</string>
+    <string name="language_chinese_simplified">Chino simplificado</string>
+    <string name="language_spanish">Español</string>
+    <string name="back">Atrás</string>
+    <string name="property_address">Dirección de la propiedad</string>
+    <string name="monthly_rental_income">Ingresos mensuales por alquiler</string>
+    <string name="monthly_mortgage">Pago mensual de hipoteca (P&amp;I)</string>
+    <string name="monthly_tax">Impuesto mensual sobre la propiedad</string>
+    <string name="monthly_insurance">Seguro mensual</string>
+    <string name="monthly_hoa">Cuota mensual HOA (opcional)</string>
+    <string name="monthly_total_expenses">Gastos mensuales totales</string>
+    <string name="input_range_hint">Rango permitido por campo: $0 a $1,000,000.</string>
+    <string name="save">Guardar cálculo</string>
+    <string name="reset">Restablecer</string>
+    <string name="dscr_ratio">Ratio DSCR: %.2f</string>
+    <string name="strong">Fuerte (≥ 1.25)</string>
+    <string name="marginal">Marginal (1.0 – 1.24)</string>
+    <string name="does_not_qualify">No califica (&lt; 1.0)</string>
+    <string name="history_empty">No hay historial</string>
+    <string name="history_swipe_hint">Desliza a la izquierda para eliminar.</string>
+    <string name="calculation_details">Detalles del cálculo</string>
+    <string name="saved_on">Guardado el %1$s</string>
+    <string name="calculation_not_found">Cálculo no encontrado.</string>
+</resources>

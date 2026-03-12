@@ -35,6 +35,7 @@ import androidx.hilt.navigation.compose.hiltViewModel
 import com.example.dscrcalculator.R
 import com.example.dscrcalculator.data.local.CalculationEntity
 import com.example.dscrcalculator.domain.util.DSCRCalculator
+import com.example.dscrcalculator.ui.common.LanguageMenu
 import com.example.dscrcalculator.ui.common.statusColor
 import com.example.dscrcalculator.ui.common.statusTextRes
 import java.text.NumberFormat
@@ -61,7 +62,8 @@ fun HistoryDetailScreen(
                             contentDescription = stringResource(R.string.back)
                         )
                     }
-                }
+                },
+                actions = { LanguageMenu() }
             )
         }
     ) { padding ->
