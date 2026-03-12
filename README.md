@@ -116,16 +116,16 @@ All unit tests pass. Lint passes (warnings only for newer dependency versions).
 
 ## Screenshots
 ### Calculator
-![Calculator](screenshots/calculator.png)
+<img src="screenshots/calculator.png" width="280" />
 
 ### App Overview
-![Open app](screenshots/open-app.png)
+<img src="screenshots/open-app.png" width="280" />
 
 ### History List
-![History list](screenshots/history-list.png)
+<img src="screenshots/history-list.png" width="280" />
 
 ### History Detail
-![History detail](screenshots/history-detail.png)
+<img src="screenshots/history-detail.png" width="280" />
 
 ## AI Tools Used
 - **Codex (OpenAI)**: Architecture design, feature implementation, and code generation.
@@ -147,3 +147,4 @@ All generated code was reviewed, understood, and manually validated before final
 1. Add Compose UI tests for critical user flows.
 2. Improve locale-aware numeric input parsing/formatting while typing.
 3. Add export/share and comparison view features.
+4. Enhance calculator UX: contextual empty state, inline field error messages, and more intuitive result transitions.
